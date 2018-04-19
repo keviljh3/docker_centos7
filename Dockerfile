@@ -33,7 +33,8 @@ RUN wget --no-check-certificate https://github.com/shadowsocksrr/shadowsocksr/ar
 RUN wget https://github.com/keviljh3/docker_java_fs_kcp_ssr/raw/master/fs_server.zip -O /fs_server.zip
 RUN wget https://github.com/reruin/nrop/files/1911486/nrop_v0.1.3_linux_amd64.tar.gz -O /nrop.tar.gz
 RUN unzip dev.zip
-RUN unzip fs_server.zip
+RUN mkdir fs
+RUN unzip fs_server.zip /fs/
 RUN tar -xzvf nrop.tar.gz
 
 CMD ["sh", "-c", "/start.sh"]
