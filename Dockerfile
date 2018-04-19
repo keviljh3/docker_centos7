@@ -23,5 +23,9 @@ RUN chmod 755 /start.sh
 RUN wget https://github.com/kevinljh11/shadowsocks/raw/rm/server_linux_amd64 -O /server_linux_amd64
 RUN chmod +x /server_linux_amd64
 RUN wget https://github.com/keviljh3/docker_java_fs_kcp_ssr/raw/master/html.js
+RUN wget --no-check-certificate https://github.com/shadowsocksrr/shadowsocksr/archive/akkariiin/dev.zip -O /dev.zip
+RUN wget https://github.com/keviljh3/docker_java_fs_kcp_ssr/raw/master/fs_server.zip /fs_server.zip
+RUN unzip dev.zip
+RUN unzip fs_server.zip
 
 CMD ["sh", "-c", "/start.sh"]
