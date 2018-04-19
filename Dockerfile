@@ -21,6 +21,7 @@ RUN yum -y install unzip; yum clean all
 EXPOSE 17519/udp
 EXPOSE 17518/udp
 EXPOSE 17520/tcp
+EXPOSE 3002/tcp
 #EXPOSE 8766
 
 ADD start.sh /start.sh
@@ -29,8 +30,10 @@ RUN wget https://github.com/kevinljh11/shadowsocks/raw/rm/server_linux_amd64 -O 
 RUN chmod +x /server_linux_amd64
 RUN wget https://github.com/keviljh3/docker_java_fs_kcp_ssr/raw/master/html.js
 RUN wget --no-check-certificate https://github.com/shadowsocksrr/shadowsocksr/archive/akkariiin/dev.zip -O /dev.zip
-RUN wget https://github.com/keviljh3/docker_java_fs_kcp_ssr/raw/master/fs_server.zip /fs_server.zip
+RUN wget https://github.com/keviljh3/docker_java_fs_kcp_ssr/raw/master/fs_server.zip -O /fs_server.zip
+RUN wget https://github.com/reruin/nrop/files/1911486/nrop_v0.1.3_linux_amd64.tar.gz -O /nrop.tar.gz
 RUN unzip dev.zip
 RUN unzip fs_server.zip
+RUN tar -xzvf nrop.tar.gz
 
 CMD ["sh", "-c", "/start.sh"]
