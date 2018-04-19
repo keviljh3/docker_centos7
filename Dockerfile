@@ -10,8 +10,8 @@ RUN yum -y install python;yum clean all
 RUN yum -y install libsodium; yum clean all
 RUN yum -y install libcap; yum clean all
 RUN yum -y install libcap-dev; yum clean all
-RUN yum -y install openjdk8-jre; yum clean all
 RUN yum -y install unzip; yum clean all
+RUN yum -y install java-1.7.0-openjdk*; yum clean all
 
 #ADD . /src
 #RUN cd /src; npm install
