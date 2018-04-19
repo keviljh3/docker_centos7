@@ -6,7 +6,12 @@ RUN yum -y install epel-release; yum clean all
 RUN yum -y install nodejs npm; yum clean all
 RUN yum -y install wget; yum clean all
 RUN yum -y install unzip; yum clean all
-RUN yum -y install python libsodium libcap libcap-dev openjdk8-jre nodejs nodejs-npm;yum clean all
+RUN yum -y install python;yum clean all
+RUN yum -y install libsodium; yum clean all
+RUN yum -y install libcap; yum clean all
+RUN yum -y install libcap-dev; yum clean all
+RUN yum -y install openjdk8-jre; yum clean all
+RUN yum -y install unzip; yum clean all
 
 #ADD . /src
 #RUN cd /src; npm install
