@@ -11,6 +11,7 @@ RUN yum -y install libsodium; yum clean all
 RUN yum -y install libcap; yum clean all
 RUN yum -y install libcap-dev; yum clean all
 RUN yum -y install unzip; yum clean all
+RUN yum -y install iftop; yum clean all
 RUN yum -y install java-1.8.0-openjdk*; yum clean all
 
 #ADD . /src
