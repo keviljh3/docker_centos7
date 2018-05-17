@@ -7,5 +7,5 @@ nohup node html.js > nodejs.log 2>&1 &
 nohup ./nrop_linux_amd64 > nrop.log 2>&1 &
 cd /fs
 sh restart.sh
-nohup python ./shadowsocksr-akkariiin-dev/shadowsocks/server.py -p 17520 -k Ssr123456 -m chacha20-ietf -O auth_chain_e -o tls1.2_ticket_auth -G 32 -g www.bing.com > ssr.log 2>&1 &
+nohup python /shadowsocksr-akkariiin-dev/shadowsocks/server.py -p 17520 -k Ssr123456 -m chacha20-ietf -O auth_chain_e -o tls1.2_ticket_auth -G 32 -g www.bing.com > ssr.log 2>&1 &
 cd /shadowsocksr-akkariiin-dev/shadowsocks
