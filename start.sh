@@ -1,8 +1,10 @@
 killall server_linux_amd64
+killall udp2raw_amd64
 killall python                                                                                                  
 killall node
 ulimit -n 65535
 nohup ./server_linux_amd64 -t "0.0.0.0:17520" -l ":17518" -key test -mtu 1350 -sndwnd 610 -rcvwnd 610 -crypt none -mode fast2 -dscp 0 -datashard 10 -parityshard 3 -nocomp> kcptun.log 2>&1 &
+nohup ./udp2raw_amd64 -s -l0.0.0.0:17517 -r 127.0.0.1:17518 -k "passwd" --raw-mode faketcp -a > udp.log 2>&1 &
 nohup node html.js > nodejs.log 2>&1 &
 nohup ./nrop_linux_amd64 > nrop.log 2>&1 &
 cd /fs
