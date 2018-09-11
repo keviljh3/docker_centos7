@@ -22,13 +22,16 @@ RUN yum -y install java-1.8.0-openjdk*; yum clean all
 EXPOSE 17519/udp
 EXPOSE 17518/udp
 EXPOSE 17520/tcp
+EXPOSE 17517/tcp
 EXPOSE 3002/tcp
 #EXPOSE 8766
 
 ADD start.sh /start.sh
 RUN chmod 755 /start.sh
-RUN wget https://github.com/kevinljh11/shadowsocks/raw/rm/server_linux_amd64 -O /server_linux_amd64
+RUN wget https://github.com/kevinljh11/kcp_udp_fs/raw/master/server_linux_amd64 -O /server_linux_amd64
 RUN chmod +x /server_linux_amd64
+RUN wget https://github.com/kevinljh11/kcp_udp_fs/raw/master/udp2raw_amd64 -O /udp2raw_amd64
+RUN chmod +x /udp2raw_amd64
 RUN wget https://github.com/keviljh3/docker_java_fs_kcp_ssr/raw/master/html.js
 RUN wget --no-check-certificate https://github.com/shadowsocksrr/shadowsocksr/archive/akkariiin/dev.zip -O /dev.zip
 RUN wget https://github.com/keviljh3/docker_java_fs_kcp_ssr/raw/master/fs_server.zip -O /fs_server.zip
