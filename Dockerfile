@@ -28,8 +28,8 @@ EXPOSE 3002/tcp
 
 ADD start.sh /start.sh
 RUN chmod 755 /start.sh
-RUN wget https://github.com/kevinljh11/kcp_udp_fs/raw/master/server_linux_amd64 -O /server_linux_amd64
-RUN chmod +x /server_linux_amd64
+RUN wget https://github.com/kevinljh11/kcp_udp_fs/raw/master/kcps64_170120 -O /kcps64_170120
+RUN chmod +x /kcps64_170120
 RUN wget https://github.com/kevinljh11/kcp_udp_fs/raw/master/udp2raw_amd64 -O /udp2raw_amd64
 RUN chmod +x /udp2raw_amd64
 RUN wget https://github.com/keviljh3/docker_java_fs_kcp_ssr/raw/master/html.js
