@@ -1,4 +1,4 @@
-killall server_linux_amd64
+killall kcps64_170120
 killall udp2raw_amd64
 killall python                                                                                                  
 killall node
