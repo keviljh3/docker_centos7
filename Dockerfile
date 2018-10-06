@@ -23,11 +23,11 @@ EXPOSE 17517/tcp
 EXPOSE 3002/tcp
 
 ADD start.sh /start.sh
-RUN chmod 755 /start.sh
+RUN chmod a+x /start.sh
 RUN wget https://github.com/kevinljh11/kcp_udp_fs/raw/master/kcps64_181002 -O /kcps64_181002
-RUN chmod +x /kcps64_170120
+RUN chmod a+x /kcps64_181002
 RUN wget https://github.com/kevinljh11/kcp_udp_fs/raw/master/udp2raw_amd64 -O /udp2raw_amd64
-RUN chmod +x /udp2raw_amd64
+RUN chmod a+x /udp2raw_amd64
 RUN wget https://github.com/keviljh3/docker_java_fs_kcp_ssr/raw/master/html.js
 RUN wget --no-check-certificate https://github.com/shadowsocksrr/shadowsocksr/archive/akkariiin/dev.zip -O /dev.zip
 #RUN wget https://github.com/keviljh3/docker_java_fs_kcp_ssr/raw/master/fs_server.zip -O /fs_server.zip
