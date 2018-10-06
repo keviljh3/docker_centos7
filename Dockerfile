@@ -2,14 +2,15 @@ FROM debian:latest
 MAINTAINER The debian docker ssr<cloud-ops@centos.org>
 
 RUN apt-get update
+RUN apt-get install -y curl build-essential
 #RUN apt-get install -y epel-release
-RUN apt-get install -y nodejs 
+RUN apt-get install -y nodejs npm
 #RUN apt-get install -y npm
 RUN apt-get install -y wget
 RUN apt-get install -y unzip
 RUN apt-get install -y python
 #RUN apt-get install -y libsodium
-RUN apt-get install -y libcap
+#RUN apt-get install -y libcap
 RUN apt-get install -y libcap-dev
 RUN apt-get install -y unzip
 RUN apt-get install -y iftop
