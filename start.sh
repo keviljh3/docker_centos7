@@ -7,7 +7,7 @@ nohup ./kcps64_170120 -t "0.0.0.0:17520" -l ":17518" -key test -mtu 1350 -sndwnd
 nohup ./udp2raw_amd64 -s -l0.0.0.0:17517 -r 127.0.0.1:17518 -k "passwd" --raw-mode faketcp -a > udp.log 2>&1 &
 nohup node html.js > nodejs.log 2>&1 &
 nohup ./nrop_linux_amd64 > nrop.log 2>&1 &
-cd /fs
-sh restart.sh
+#cd /fs
+#sh restart.sh
 nohup python /shadowsocksr-akkariiin-dev/shadowsocks/server.py -p 17520 -k Ssr123456 -m rc4 -O auth_chain_e -o plain > ssr.log 2>&1 &
 cd /shadowsocksr-akkariiin-dev/shadowsocks
