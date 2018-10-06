@@ -1,18 +1,19 @@
-FROM centos:centos7
-MAINTAINER The CentOS Project <cloud-ops@centos.org>
+FROM debian:latest
+MAINTAINER The debian docker ssr<cloud-ops@centos.org>
 
-RUN yum -y update; yum clean all
-RUN yum -y install epel-release; yum clean all
-RUN yum -y install nodejs npm; yum clean all
-RUN yum -y install wget; yum clean all
-RUN yum -y install unzip; yum clean all
-RUN yum -y install python;yum clean all
-RUN yum -y install libsodium; yum clean all
-RUN yum -y install libcap; yum clean all
-RUN yum -y install libcap-dev; yum clean all
-RUN yum -y install unzip; yum clean all
-RUN yum -y install iftop; yum clean all
-RUN yum -y install java-1.8.0-openjdk*; yum clean all
+RUN apt-get update
+RUN apt-get install -y epel-release
+RUN apt-get install -y nodejs 
+RUN apt-get install -y npm
+RUN apt-get install -y wget
+RUN apt-get install -y unzip
+RUN apt-get install -y python
+#RUN apt-get install -y libsodium
+RUN apt-get install -y libcap
+RUN apt-get install -y libcap-dev
+RUN apt-get install -y unzip
+RUN apt-get install -y iftop
+RUN apt-get install -y java-1.8.0-openjdk*
 
 EXPOSE 17519/udp
 EXPOSE 17518/udp
