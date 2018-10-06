@@ -2,7 +2,7 @@ FROM debian:latest
 MAINTAINER The debian docker ssr<cloud-ops@centos.org>
 
 RUN apt-get update
-RUN apt-get install -y epel-release
+#RUN apt-get install -y epel-release
 RUN apt-get install -y nodejs 
 RUN apt-get install -y npm
 RUN apt-get install -y wget
