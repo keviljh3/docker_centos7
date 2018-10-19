@@ -9,7 +9,7 @@ RUN apt-get install -y nodejs
 RUN apt-get install -y wget
 RUN apt-get install -y unzip
 RUN apt-get install -y python
-#RUN apt-get install -y libsodium
+RUN apt-get install -y libsodium-dev
 #RUN apt-get install -y libcap
 RUN apt-get install -y libcap-dev
 RUN apt-get install -y unzip
