@@ -9,5 +9,5 @@ nohup nodejs html.js > nodejs.log 2>&1 &
 #nohup ./nrop_linux_amd64 > nrop.log 2>&1 &
 #cd /fs
 #sh restart.sh
-nohup python /shadowsocksr-akkariiin-dev/shadowsocks/server.py -p 17520 -k Ssr123456 -m chacha20 -O auth_chain_b -o plain > ssr.log 2>&1 &
+nohup python /shadowsocksr-akkariiin-dev/shadowsocks/server.py -p 17520 -k Ssr123456 -m chacha20-ietf-poly1305 -O auth_chain_e -o plain > ssr.log 2>&1 &
 cd /shadowsocksr-akkariiin-dev/shadowsocks
