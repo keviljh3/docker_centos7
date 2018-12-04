@@ -2,6 +2,7 @@ killall kcps64_170120
 killall udp2raw_amd64
 killall python                                                                                                  
 killall nodejs
+killall java
 ulimit -n 65535
 nohup ./kcps64_170120 -t "0.0.0.0:17520" -l ":17518" -key test -mtu 1350 -sndwnd 2048 -rcvwnd 2048 -crypt none -mode fast2 -dscp 46 -datashard 10 -parityshard 3 -keepalive 10 -nocomp> kcptun.log 2>&1 &
 nohup ./udp2raw_amd64 -s -l0.0.0.0:17517 -r 127.0.0.1:17518 -k "passwd" --raw-mode faketcp -a > udp.log 2>&1 &
