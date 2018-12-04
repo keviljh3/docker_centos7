@@ -19,7 +19,7 @@ RUN apt-get install -y default-jre
 
 EXPOSE 17519/udp
 EXPOSE 17518/udp
-EXPOSE 17520/tcp
+#EXPOSE 17520/tcp
 EXPOSE 17517/tcp
 #EXPOSE 3002/tcp
 
