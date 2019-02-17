@@ -6,8 +6,9 @@ killall java
 ulimit -s 65535
 ulimit -n 65535
 nohup ./kcps64_170120 -t "0.0.0.0:17520" -l ":17518" -key test -mtu 1350 -sndwnd 2048 -rcvwnd 2048 -crypt none -mode fast2 -dscp 46 -datashard 10 -parityshard 3 -keepalive 10 -nocomp> kcptun.log 2>&1 &
-nohup ./udp2raw_amd64 -s -l0.0.0.0:17517 -r 127.0.0.1:17518 -k "passwd" --raw-mode faketcp -a > udp.log 2>&1 &
+nohup ./udp2raw_amd64 -s -l0.0.0.0:17517 -r 127.0.0.1:17518 -k "passwd" --raw-mode faketcp -a > udpkcp.log 2>&1 &
 nohup nodejs html.js > nodejs.log 2>&1 &
+nohup ./udp2raw_amd64 -s -l0.0.0.0:17516 -r 127.0.0.1:17519 -k "passwd" --raw-mode faketcp -a > udpfs.log 2>&1 &
 #nohup ./nrop_linux_amd64 > nrop.log 2>&1 &
 #cd /fs
 sh /fs/restart.sh
