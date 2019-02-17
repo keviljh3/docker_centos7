@@ -20,8 +20,11 @@ RUN apt-get install -y default-jre
 EXPOSE 17519/udp
 EXPOSE 17518/udp
 #EXPOSE 17520/tcp
+#kcptun-udp
 EXPOSE 17517/tcp
 #EXPOSE 3002/tcp
+#finalspeed-udp
+EXPOSE 17516/tcp
 
 ADD start.sh /start.sh
 RUN chmod a+x /start.sh
