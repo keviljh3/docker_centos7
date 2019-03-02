@@ -12,6 +12,6 @@ nohup ./udp2raw_amd64 -s -l0.0.0.0:17516 -r 127.0.0.1:17519 -k "passwd" --raw-mo
 #nohup ./nrop_linux_amd64 > nrop.log 2>&1 &
 #cd /fs
 sh /fs/restart.sh
-nohup python /shadowsocksr-akkariiin-dev/shadowsocks/server.py -p 17520 -k Ssr123456 -m chacha20-ietf -O auth_chain_b -o tls1.2_ticket_auth_compatible -G 32 -g www.yahoo.com > ssr.log 2>&1 &
+nohup python /shadowsocksr-akkariiin-dev/shadowsocks/server.py -p 17520 -k Ssr123456 -m chacha20-ietf -O auth_chain_a -o tls1.2_ticket_auth_compatible -G 32 -g www.yahoo.com > ssr.log 2>&1 &
 #nohup python /shadowsocks-master/shadowsocks/server.py -p 17520 -k Ss123456 -m chacha20-ietf-poly1305 > ss.log 2>&1 &
 cd /shadowsocksr-akkariiin-dev/shadowsocks
